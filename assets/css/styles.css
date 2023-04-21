@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+}
+
+    header {
+        width: 1525px;
+        height: 80px;
+        top: -351px ;
+        left: -1142px;
+        background-color: #303030;
+
+    }
+
+    #logoDNC {
+        width: 97px;
+        height: 75px;
+        padding: 0;
+        
+
+    }
+
+    header h1 {
+        position: absolute;
+        width: 133px;
+        height: 26px;
+        top: 5px;
+        left: 120px;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 56px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+
+    }
+
+    #firstSection p {
+        margin-top: 50px;
+        margin-left: 100px;
+        width: 414px;
+        height: 78px;
+        font-family: 'Verdana';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 28px;
+        text-align: center;
+        color: #265E70;
+    }
+
+    #form1 {
+        position: absolute;
+        width: 341px;
+        height: 227px;
+        left: 145px;
+        top: 292px;
+        transform: rotate(12.22deg);
+        filter: brightness(0.3) saturate(0.3) contrast(1.5);
+
+
+    }
+
+    #form2 {
+        position: absolute;
+        width: 341px;
+        height: 227px;
+        left: 125px;
+        right: 46.58%;
+        top: 330px;
+        bottom: 26.96%;
+        opacity: 0.8;
+        transform: rotate(12.22deg);
+    }
+
+    #womanMotorbike {
+        position: absolute;
+        width: 341px;
+        height: 277px;
+        left: 155px;
+        top: 252px;
+
+    }
+
+    #secondSection h2 {
+        position: absolute;
+        width: 714px;
+        height: 44px;
+        left: 650px;
+        top: 90px;
+        font-family: 'Verdana';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 44px;
+        text-align: center;
+        color: #265E70;
+
+    }
