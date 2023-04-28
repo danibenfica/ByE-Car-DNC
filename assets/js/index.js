@@ -50,3 +50,9 @@ stLeft.forEach(stLeft => {
         intervalId = setInterval(autoRoll, intervalTime);
     });
 });
+
+
+function openModal(){
+    const modal = document.getElementById('windowModal')
+    modal.classList.add('open')
+}

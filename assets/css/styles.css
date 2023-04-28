@@ -271,3 +271,46 @@ body {
         cursor: pointer;
         
     }
+
+    #saibaMaisBtn:hover{
+        background: #265E70;
+    }
+
+    .windowModal {
+        position: absolute;
+        width: 100%;
+        height:585px;
+        top: 80px;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: rgba(223, 223, 223, 0.9);
+    }
+
+
+    .windowModal.open{
+        display: flex;
+    }
+
+
+    .modal {
+        position: absolute;
+        width: 558px;
+        height: 533px;
+        background: rgba(77, 188, 233, 0.75);
+        border-radius: 15px;
+    }
+
+    .buttonX {
+        position: absolute;
+        width: 32px;
+        height: 25px;
+        left:500px;
+        padding-top: 20px;
+        cursor: pointer;
+
+    }
