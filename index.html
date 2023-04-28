@@ -16,6 +16,9 @@
     </header>
 
     <main>
+        <img src="./assets/imgs/setaesquerda.png" alt="seta esquerda" id="stLeft" class="staLeft">
+        <img src="./assets/imgs/setadireita.png" alt="seta direita" id="stRight" class="staLeft">
+
         <section id="firstSection">
             <p>Ter <strong>uma moto</strong> por assinatura nunca foi tão fácil!</p>
             <img src="./assets/imgs/form.png"
@@ -34,8 +37,38 @@
 
         <section id="secondSection">
             <h2>Conheça nossas <span style="font-weight: bold; color: #4DBCE9;">motos</span>!</h2>
+            
+
+            <div id="carrossel">
+                <div id="slide">
+                    <div id="imagens">
+                        <div class="motorbikeContainer">
+                            <img src="./assets/imgs/moto1.png"
+                            alt="Moto 1"
+                            class="motorbike motorbikeSelected motorbikeT "
+                            data-text="Scooter Elétrica Voltz EV1"
+                            id="moto1">
+                            <p class="motorbikeText" id="moto1Text">Scooter Elétrica Voltz EV1</p>
+                        </div>
+                        <div class="motorbikeContainer">
+                            <img src="./assets/imgs/moto2.png"
+                            alt="Moto 2"
+                            class="motorbike motorbikeSelected motorbikeT"
+                            data-text="Honda CB 500X"
+                            id="moto2">
+                            <p class="motorbikeText" id="moto2Text">Honda CB 500X</p>
+                        </div>
+                        <p id="aPartir">A partir de</p>
+                        <p id="preco">R$ 619,90</p>
+                        <p id="plano">Plano de 30 meses</p>                          
+                    </div>  
+                </div>
+            </div>
+
+            <button id="saibaMaisBtn">Saiba mais</button>
+
         </section>
     </main>
-    <script src="./assets/js/"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
 </html>
