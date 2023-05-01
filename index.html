@@ -44,7 +44,7 @@
                         <div class="motorbikeContainer">
                             <img src="./assets/imgs/moto1.png"
                             alt="Moto 1"
-                            class="motorbike motorbikeSelected motorbikeT "
+                            class="motorbike motorbikeSelected motorbikeT on motorbike1  "
                             data-text="Scooter Elétrica Voltz EV1"
                             id="moto1">
                             <p class="motorbikeText" id="moto1Text">Scooter Elétrica Voltz EV1</p>
@@ -52,7 +52,7 @@
                         <div class="motorbikeContainer">
                             <img src="./assets/imgs/moto2.png"
                             alt="Moto 2"
-                            class="motorbike motorbikeSelected motorbikeT"
+                            class="motorbike motorbikeSelected motorbikeT motorbike2 on"
                             data-text="Honda CB 500X"
                             id="moto2">
                             <p class="motorbikeText" id="moto2Text">Honda CB 500X</p>
@@ -71,13 +71,15 @@
             <div class="modal">
                 <img src="./assets/imgs/x.png"
                 id="buttonX"
-                class="buttonX">
-                <h1>Meu Modal</h1>
-                <p>modal</p>
+                onclick="closeModal()"
+                class="buttonX">             
+                <div id="infoandImg">
+                </div>   
+                <button id="buttonModal">Quero Assinar!</button>
             </div>
+        </div>
     </main>
 
     <script src="./assets/js/index.js"></script>
 </body>
-    </div>
 </html>
