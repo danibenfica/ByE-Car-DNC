@@ -3,9 +3,13 @@ const motorbikes = document.querySelectorAll('.motorbike');
 const allMotorbikes = motorbikes.length;
 
 let motoStart = 0;
+let intervalID;
+let mouseTimer;
 
 stLeft.forEach(stLeft => {
   stLeft.addEventListener('click', () => {
+    clearInterval(intervalID);
+    clearTimeout(mouseTimer);
     const left = stLeft.classList.contains("staLeft");
     if (left) {
       motoStart -= 1;
@@ -31,11 +35,42 @@ stLeft.forEach(stLeft => {
   });
 });
 
+function startCarousel() {
+  intervalID = setInterval(() => {
+    let nextIndex = motoStart + 1;
+    if (nextIndex >= allMotorbikes) {
+      nextIndex = 0;
+    }
+    motorbikes[nextIndex].scrollIntoView({
+      inline: "center",
+      behavior: "smooth"
+    });
+    motorbikes[motoStart].classList.remove('motorbikeSelected');
+    motorbikes[nextIndex].classList.add('motorbikeSelected');
+    motoStart = nextIndex;
+    const text = motorbikes[motoStart].getAttribute("data-text");
+    const pElement = document.querySelector("#imagens p");
+    pElement.textContent = text;
+  }, 7000);
+
+  document.addEventListener("mousemove", () => {
+    clearInterval(intervalID);
+    clearTimeout(mouseTimer);
+    mouseTimer = setTimeout(() => {
+      startCarousel();
+    }, 7000);
+  });
+}
+
+startCarousel();
+
 function openModal() {
+  clearInterval(intervalID);
+  clearTimeout(mouseTimer);
   const modal = document.getElementById('windowModal');
   const infoandImg = document.getElementById('infoandImg');
   infoandImg.innerHTML = '';
-  
+
   const selectedMotorbike = document.querySelector('.motorbikeSelected');
   if (selectedMotorbike && selectedMotorbike.classList.contains('motorbike1')) {
     const selectedMotorbikeImgSrc = selectedMotorbike.getAttribute('src');
@@ -53,6 +88,7 @@ function openModal() {
     infoandImg.appendChild(title1);
     title1.appendChild(info1);
     modal.classList.add('open');
+  
   } else if (selectedMotorbike && selectedMotorbike.classList.contains('motorbike2')) {
     const selectedMotorbikeImgSrc = selectedMotorbike.getAttribute('src');
     const selectedMotorbikeImg = document.createElement('img');
@@ -69,13 +105,16 @@ function openModal() {
     infoandImg.appendChild(title2);
     title2.appendChild(info2);
     modal.classList.add('open');
+  
   } else {
     modal.classList.remove('open');
+    startCarousel()
   }
 
   modal.addEventListener('click', (e) => {
     if (e.target.id == 'buttonX' || e.target.id == 'windowModal') {
-     modal.classList.remove('open');
+      modal.classList.remove('open');
+      startCarousel();
     }
   });
 }
