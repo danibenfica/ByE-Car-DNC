@@ -2,7 +2,6 @@
 
 O Bye Car é um projeto de estudo de algumas funcionalidades do JavaScript que consiste em um site, onde o usuário pode ter uma moto por assinatura. O objetivo do projeto é fornecer aos usuários uma maneira fácil e prática de assinar uma moto e experimentar a mobilidade urbana de forma sustentável.
 
-## Funcionamento
 
 ### Página Inicial
 
