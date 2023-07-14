@@ -23,7 +23,8 @@ Em seguida, a classe CSS ".motorbikeSelected" é adicionada à moto atual para q
 
 Por fim, o código remove a classe ".motorbikeSelected" de todas as motos no carrossel e adiciona-a apenas à moto atual.
 
-`const stLeft = document.querySelectorAll('.staLeft');
+```javascript
+const stLeft = document.querySelectorAll('.staLeft');
 const motorbikes = document.querySelectorAll('.motorbike');
 const allMotorbikes = motorbikes.length;
 
@@ -55,7 +56,7 @@ stLeft.forEach(stLeft => {
     motorbikes[motoStart].classList.add("motorbikeSelected");
   });
 });`
-
+```
 ### Modal
 
 O modal é exibido quando o usuário clica no botão "Saiba mais" do carrossel de imagens. Ele exibe informações detalhadas sobre a moto selecionada e um botão para o usuário adquirir o serviço. O modal é controlado pelo JavaScript e independente da moto trocar automaticamente ou manualmente, a moto exibida é a que é apresentada no carrossel no momento.
@@ -66,7 +67,7 @@ do carrossel de imagens. Ela exibe informações detalhadas sobre a moto selecio
 para o usuário adquirir o serviço. O modal é controlado pelo JavaScript e independente da moto
 trocar automaticamente ou manualmente, a moto exibida é a que é apresentada no carrossel no momento.
 
-`function openModal() {
+```javascript function openModal() {
   clearInterval(intervalID);
   clearTimeout(mouseTimer);
   const modal = document.getElementById('windowModal');
@@ -88,7 +89,7 @@ trocar automaticamente ou manualmente, a moto exibida é a que é apresentada no
     }
   });
 }`
-
+```
 
 ### Tecnologias Usadas
 
